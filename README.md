@@ -1,5 +1,6 @@
 # sentimentalnews-azurefunctions
 
+These functions are currently being used by [Sentimental News](http://news-sentiment.azurewebsites.net/)
 
 These functions are used to recieve data from Sentimental News, and process it though a chain of data-processing functions.
 
