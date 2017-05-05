@@ -1,0 +1,31 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in"
+    },
+    {
+      "type": "blob",
+      "name": "output",
+      "path": "processingcontainer/{rand-guid}",
+      "connection": "newstopic852_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "http",
+      "name": "$return",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "metadataTable",
+      "tableName": "metadata",
+      "take": 50,
+      "connection": "newstopic852_STORAGE",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}

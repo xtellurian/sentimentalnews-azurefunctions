@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "name": "myBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "outcontainer/{name}",
+      "connection": "newstopic852_STORAGE"
+    },
+    {
+      "type": "blob",
+      "name": "$return",
+      "path": "outcontainer2/{name}",
+      "connection": "newstopic852_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

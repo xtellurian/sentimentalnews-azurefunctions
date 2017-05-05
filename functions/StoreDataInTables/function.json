@@ -1,0 +1,40 @@
+{
+  "bindings": [
+    {
+      "name": "myBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "outcontainer2/{runId}",
+      "connection": "newstopic852_STORAGE"
+    },
+    {
+      "type": "table",
+      "name": "sourcesTable",
+      "tableName": "sourcesTable",
+      "connection": "newstopic852_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "articlesTable",
+      "tableName": "articlesTable",
+      "connection": "newstopic852_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "topicsTable",
+      "tableName": "topicsTable",
+      "connection": "newstopic852_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "metaTable",
+      "tableName": "metadata",
+      "connection": "newstopic852_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
