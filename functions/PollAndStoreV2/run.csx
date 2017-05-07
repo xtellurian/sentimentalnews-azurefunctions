@@ -71,10 +71,10 @@ public static bool CheckMetadata(CloudTable table, TraceWriter log)
     if( (DateTime.Now - meta.LastAccessed) > new TimeSpan(1,0,0) ) // 1 hr
     {
         meta.LastAccessed = DateTime.Now;
-        operation = TableOperation.Replace(meta);
+        operation = TableOperation.Merge(meta); // update the values we care about
         table.Execute(operation);
         log.Info($"Last Successful call was {diffInMinutes} mins ago");
-        log.Info($"Updated metadata with time: {meta.LastAccessed}");
+        log.Info($"Merged metadata with time: {meta.LastAccessed}");
         return true;
     }
     else
